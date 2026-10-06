@@ -1,0 +1,8 @@
+<h1>Delete Meeting</h1>
+<p>Are you sure ?</p>
+
+<form method = "post">
+    {% csrf_token %}
+    <button type="submit">Confirm Delete</button>
+</form>
+<a href="{% url 'listMeetings' %}">Cancel</a>

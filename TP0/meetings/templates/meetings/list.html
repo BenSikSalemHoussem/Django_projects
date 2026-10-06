@@ -1,0 +1,10 @@
+<h1>Meetings list</h1>
+<ul>
+    {% for element in meets %}
+        <li>{{element.title}} : {{element.date}}</li>
+                {% csrf_token %}
+                <a href="{% url 'delMeet' element.id %}">Delete</a>
+        {%empty%}
+        <p>No meetings</p>
+    {%endfor%}
+</ul>
