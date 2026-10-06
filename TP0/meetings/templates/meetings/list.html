@@ -3,7 +3,9 @@
     {% for element in meets %}
         <li>{{element.title}} : {{element.date}}</li>
                 {% csrf_token %}
-                <a href="{% url 'delMeet' element.id %}">Delete</a>
+                <button><a href="{% url 'delMeet' element.id %}">Delete</a></button>
+                <button><a href="{% url 'updateMeet' element.id %}">UPDATE</a></button>
+            <br><br>
         {%empty%}
         <p>No meetings</p>
     {%endfor%}
