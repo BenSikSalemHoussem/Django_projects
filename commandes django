@@ -5,7 +5,7 @@ pip install django
 pip freeze > requirements.txt
 django-admin startproject nom_du_projet .
 
-
+python manage.py run
 
 python3 manage.py makemigrations
 python3 manage.py migrate
